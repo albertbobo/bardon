@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>巴盾投资培训学院</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="mask">
+    <header>
+        <!--logo-->
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+                <h1>巴盾<span>|</span></h1>
+            </a>
+            <div class="logo_p">
+                <p>投资培训学院</p>
+                <p>BARDON INVESTMENT TRAINING ACADEMY</p>
+            </div>
+
+        </div>
+
+        <!--导航栏-->
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">专业测评</a></li>
+                <li><a href="#">投资课程</a></li>
+                <li><a href="#">圈子社群</a></li>
+                <li><a href="#">关于巴盾</a></li>
+            </ul>
+        </nav>
+
+        <!--全部课程按钮-->
+        <div class="sidebar" id="appearBtn">
+            <button>
+                <a href="#">全部课程</a>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!--侧边栏-->
+        <div id="sideBox">
+            <div id="hiddenBtn">
+                <i></i>
+                <i></i>
+            </div>
+            <div class="sideTitle">全部课程</div>
+            <div class="sideCon">
+                <div class="sideWay">
+                    <img src="images/classifyIco.png" alt="">
+                    <p>按分类</p>
+                    <ul>
+                        <li><a href="#">股票</a></li>
+                        <li><a href="#">期货</a></li>
+                        <li><a href="#">心理</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>
+                <div class="sideWay">
+                    <img src="images/lecturerIco.png" alt="">
+                    <p>按讲师</p>
+                    <ul>
+                        <li><a href="#">罗宾</a></li>
+                        <li><a href="#">唐谷</a></li>
+                        <li><a href="#">谢佳颖</a></li>
+                        <li><a href="#">王焕昌</a></li>
+                        <li><a href="#">金言</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>
+                <div class="sideWay">
+                    <img src="images/techIco.png" alt="">
+                    <p>按技术</p>
+                    <ul>
+                        <li><a href="#">趋势交易</a></li>
+                        <li><a href="#">涨停板</a></li>
+                        <li><a href="#">K线</a></li>
+                        <li><a href="#">MACD</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>
+                <div class="sideWay">
+                    <img src="images/peoIco.png" alt="">
+                    <p>按人群</p>
+                    <ul>
+                        <li><a href="#">投资新手</a></li>
+                        <li><a href="#">投资能手</a></li>
+                        <li><a href="#">投资高手</a></li>
+                        <li><a href="#">职业操盘手</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--搜索框-->
+        <div id="search_bar" class="search_bar">
+            <form id="myform">
+                <input class="input" type="text" name="key" id="search" placeholder="想搜点什么呢...">
+                <input class="search_btn" type="submit" value="">
+                <span class="search_ico"></span>
+            </form>
+        </div>
+
+    </header>
+
+    <!--广播通告-->
+    <div class="broadcast">
+        <div class="voice">
+            <img src="images/voice.png" alt="">
+            <p>代替：我们的价值观是“诚信为本，真善美爱；简单快速，工匠精神；学以致用，自我增值”<a href="#">更多>></a></p>
+        </div>
+    </div>
+
+    <!--banner轮播-->
+    <div class="banner">
+        <div id="myCarouse" class="carousel slide" data-ride="carousel" data-interval="3000"> <!--自动轮播时间间隔3s-->
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarouse" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarouse" data-slide-to="1"></li>
+                <li data-target="#myCarouse" data-slide-to="2"></li>
+                <li data-target="#myCarouse" data-slide-to="3"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/banner01.jpg" alt="">
+                    <div class="slogan">
+                        <p>做快乐的投资者</p>
+                        <p>TO BE A HAPPY INVESTOR</p>
+                        <a href="#">投资测评</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/banner02.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/banner01.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/banner02.jpg" alt="">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarouse" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarouse" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+
+</div>
+
+<!--主体/各栏目内容-->
+<main>
+    <div class="content">
+        <!--投资课程-->
+        <div class="investCourse">
+            <div class="columnTitle">
+                <p>投资课程</p>
+                <p>多维学习成为金融行家</p>
+            </div>
+            <div class="columnCourse">
+                <ul>
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco01.png" alt="">
+                                <p>股票课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>股票课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco02.png" alt="">
+                                <p>期货课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>期货课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco03.png" alt="">
+                                <p>心理课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>心理课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#">
+                    <div class="hotCourse"></div>
+                    <img src="images/hotCourse.png" alt="">
+                    <span>更多热门课程</span>
+                </a>
+            </div>
+        </div>
+
+        <!--专业测评-->
+        <div class="proEva">
+            <div class="columnTitle">
+                <p>专业测评</p>
+                <p>塑造最有效的投资风格</p>
+            </div>
+            <div class="columnEva">
+                <ul>
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaModel01.png" alt="">
+                            <img src="images/evaModel02.png" alt="">
+                            <p>测评模型</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaJoin01.png" alt="">
+                            <img src="images/evaJoin02.png" alt="">
+                            <p>参与测评</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaFeedback01.png" alt="">
+                            <img src="images/evaFeedback02.png" alt="">
+                            <p>测评反馈</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--圈子社群-->
+        <div class="cirGroup">
+            <div class="columnTitle groupTitle">
+                <p>圈子社群</p>
+                <p>倾力智造尖端人脉经济圈</p>
+            </div>
+            <div class="columnGroup">
+                <ul>
+                    <li>
+                        <img src="images/groupPic01.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资峰会</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/groupPic02.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资茶馆</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <img src="images/groupPic03.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资听听</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/groupPic04.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资峰会</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--第一平台-->
+        <div class="platform">
+            <div class="columnTitle">
+                <p>移动互联网时代投资教育第一平台</p>
+                <p>巴盾立足于投资教育领域，整合国内外优质资源，搭建线上线下学习平台，为投资者提供课程、测评和社群三大服务，<br>
+                    成就金融投资赢家，引领快乐投资浪潮。</p>
+            </div>
+            <a href="#" class="seeMore seeMore2">了解更多>></a>
+            <div class="columnPlat">
+                <ul>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco01_1.png" alt="">
+                            <img src="images/platIco01_2.png" alt="">
+                        </div>
+                        <p>最强投资测评</p>
+                    </li>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco02_1.png" alt="">
+                            <img src="images/platIco02_2.png" alt="">
+                        </div>
+                        <p>最干货课程 </p>
+                    </li>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco03_1.png" alt="">
+                            <img src="images/platIco03_2.png" alt="">
+                        </div>
+                        <p>最影响力圈子</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--订阅巴盾-->
+        <div class="takeBd">
+            <div class="columnTitle">
+                <p>订阅巴盾</p>
+                <p>最好的金融投资干货</p>
+            </div>
+            <div class="columnTake">
+                <div class="followUs">
+                    <img src="images/followUs.png" alt="">
+                    <ul>
+                        <li>
+                            <p>一条</p>
+                            <hr>
+                            <p>每日1条爆炸市场资讯</p>
+                        </li>
+                        <li>
+                            <p>一法</p>
+                            <hr>
+                            <p>每日1则技术干货打法</p>
+                        </li>
+                        <li>
+                            <p>一人</p>
+                            <hr>
+                            <p>每日1位金融投资达人</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="seeMore seeMore3">了解更多>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--版权区-->
+<footer>
+    <div class="aboutUs">
+        <ul>
+            <li></li><li></li><li></li><li></li>
+        </ul>
+        <dl>
+            <dt><a href="#">专业测评</a></dt>
+            <dd><a href="#">测评介绍</a></dd>
+            <dd><a href="#">测评模型</a></dd>
+            <dd><a href="#">参与测评</a></dd>
+            <dd><a href="#">测评反馈</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">投资课程</a></dt>
+            <dd><a href="#">系统课程</a></dd>
+            <dd><a href="#">股票课程</a></dd>
+            <dd><a href="#">期货课程</a></dd>
+            <dd><a href="#">心理课程</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">圈子社群</a></dt>
+            <dd><a href="#">投资峰会</a></dd>
+            <dd><a href="#">投资茶馆</a></dd>
+            <dd><a href="#">投资听听</a></dd>
+            <dd><a href="#">投资静旅</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">关于我们</a></dt>
+            <dd><a href="#">巴盾简介</a></dd>
+            <dd><a href="#">巴盾释义</a></dd>
+            <dd><a href="#">巴盾使命</a></dd>
+            <dd><a href="#">巴盾价值观</a></dd>
+            <dd><a href="#">巴盾优势</a></dd>
+        </dl>
+    </div>
+
+    <div class="contactUs">
+        <img src="images/2code.png" alt="">
+        <div class="conWay">
+            <ul>
+                <li><a href="#"><img src="images/qq.png" alt=""></a></li>
+                <li><a href="#"><img src="images/microblog.png" alt=""></a></li>
+                <li><a href="#"><img src="images/wechat.png" alt=""></a></li>
+            </ul>
+            <p>地址：广州市天河区珠江新城华夏路富力盈凯广场42楼</p><br>
+            <p>电话：020-38369769<span>|</span>传真：020-3836973</p>
+        </div>
+        <div class="copyright">
+            <p>COPYRIGHT (C)   巴盾投资培训学院 CO.,LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
