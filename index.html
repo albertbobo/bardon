@@ -1,571 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>个人简历PersonalResume</title>
+    <meta charset="UTF-8">
+    <title>巴盾投资培训学院</title>
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/font-awesome.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/main.js"></script>
 </head>
-
 <body>
+<div class="mask">
+    <header>
+        <!--logo-->
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+                <h1>巴盾<span>|</span></h1>
+            </a>
+            <div class="logo_p">
+                <p>投资培训学院</p>
+                <p>BARDON INVESTMENT TRAINING ACADEMY</p>
+            </div>
 
-<div class="container">
-    <!--Resume标题及基本信息-->
-    <div class="row top">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="top-title">
-                <img  src="images/resume.png" alt="">
-            </div>
-        </div>
-        <div class="top-info">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <!--姓名及求职意向-->
-                <div class="info-left">
-                    <p>郑思婷</p>
-                    <p>Web前端开发</p>
-                </div>
-                <!--坐标及联系方式，弹出框形式-->
-                <div class="info-right">
-                    <p class="fa fa-map-marker" data-toggle="popover" data-placement="left" title="坐标"
-                       data-content="广州"></p>
-                    <p class="fa fa-mobile-phone" data-toggle="popover" data-placement="left" title="联系电话"
-                       data-content="159-8630-1253"></p>
-                    <p class="fa fa-at" data-toggle="popover" data-placement="bottom" title="电子邮箱"
-                       data-content="einstein1995@163.com"></p>
-                </div>
-            </div>
-            <!--个人照片-->
-            <div class="info-img">
-                <img class="img-circle" src="images/myphoto.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <!--content-->
-    <div class="row content">
-        <!--教育背景-->
-        <div id="education">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseOne" class="column-title">
-                <span class="fa fa-graduation-cap"></span><span>教育背景</span><span>EDUCATION</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseOne" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder">
-                    <span class="fa fa-lightbulb-o"></span>
-                    <span>2014.09-2017.06</span>
-                </div>
-                <div class="details-con">
-                    <p>广东农工商职业技术学院</p>
-                    <p>计算机多媒体技术专业</p>
-                </div>
-                <div class="details-tit">
-                    <span class="fa fa-lightbulb-o"></span>
-                    <span>主修课程</span>
-                </div>
-                <div class="details-con">
-                    <p>设计色彩、网站建设、网页布局、Web交互设计、信息可视化设计、Web界面设计、网页编程与数据库、Web移动开发等。</p>
-                </div>
-                <div class="details-tit">
-                    <span class="fa fa-lightbulb-o"></span>
-                    <span>学分绩点</span>
-                </div>
-                <div class="details-con">
-                    <p>4.0/5.0&nbsp;&nbsp;&nbsp;专业前2%</p>
-                </div>
-            </div>
         </div>
 
-        <!--奖项荣誉-->
-        <div id="awards">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseThree" class="column-title">
-                <span class="fa fa-trophy"></span><span>奖项荣誉</span><span>AWARDS</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
+        <!--导航栏-->
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">专业测评</a></li>
+                <li><a href="#">投资课程</a></li>
+                <li><a href="#">圈子社群</a></li>
+                <li><a href="#">关于巴盾</a></li>
+            </ul>
+        </nav>
+
+        <!--全部课程按钮-->
+        <div class="sidebar" id="appearBtn">
+            <button>
+                <a href="#">全部课程</a>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!--侧边栏-->
+        <div id="sideBox">
+            <div id="hiddenBtn">
+                <i></i>
+                <i></i>
             </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseThree" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder details-tit-pad3">
-                    <span class="fa fa-bookmark"></span>
-                    <span>2016.06</span>
+            <div class="sideTitle">全部课程</div>
+            <div class="sideCon">
+                <div class="sideWay">
+                    <img src="images/classifyIco.png" alt="">
+                    <p>按分类</p>
+                    <ul>
+                        <li><a href="#">股票</a></li>
+                        <li><a href="#">期货</a></li>
+                        <li><a href="#">心理</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
                 </div>
-                <div class="details-con">
-                    <p>通过OSTA全国计算机信息高新技术考试（图像制作员Photoshop平台）</p>
+                <div class="sideWay">
+                    <img src="images/lecturerIco.png" alt="">
+                    <p>按讲师</p>
+                    <ul>
+                        <li><a href="#">罗宾</a></li>
+                        <li><a href="#">唐谷</a></li>
+                        <li><a href="#">谢佳颖</a></li>
+                        <li><a href="#">王焕昌</a></li>
+                        <li><a href="#">金言</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
                 </div>
-                <div class="details-tit details-tit-pad3">
-                    <span class="fa fa-bookmark"></span>
-                    <span>2016.03</span>
+                <div class="sideWay">
+                    <img src="images/techIco.png" alt="">
+                    <p>按技术</p>
+                    <ul>
+                        <li><a href="#">趋势交易</a></li>
+                        <li><a href="#">涨停板</a></li>
+                        <li><a href="#">K线</a></li>
+                        <li><a href="#">MACD</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
                 </div>
-                <div class="details-con">
-                    <p>通过NCRE全国计算机等级考试（二级Web程序设计）</p>
-                </div>
-                <div class="details-tit details-tit-pad3">
-                    <span class="fa fa-bookmark"></span>
-                    <span>2016.03</span>
-                </div>
-                <div class="details-con">
-                    <p>荣获第14届中国大学生广告艺术节学院奖优秀奖</p>
-                </div>
-                <div class="details-tit details-tit-pad3">
-                    <span class="fa fa-bookmark"></span>
-                    <span>2015-2016学年</span>
-                </div>
-                <div class="details-con">
-                    <p>荣获国家励志奖学金</p>
-                </div>
-                <div class="details-tit details-tit-pad3">
-                    <span class="fa fa-bookmark"></span>
-                    <span>2016.12</span>
-                </div>
-                <div class="details-con">
-                    <p>CET-4&nbsp;&nbsp;&nbsp;458分</p>
+                <div class="sideWay">
+                    <img src="images/peoIco.png" alt="">
+                    <p>按人群</p>
+                    <ul>
+                        <li><a href="#">投资新手</a></li>
+                        <li><a href="#">投资能手</a></li>
+                        <li><a href="#">投资高手</a></li>
+                        <li><a href="#">职业操盘手</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!--专业技能-->
-        <div id="skills">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseTwo" class="column-title">
-                <span class="fa fa-wrench"></span><span>专业技能</span><span>SKILLS</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseTwo" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>HTML/CSS</span>
-                </div>
-                <div class="details-con">
-                    <div class="chartGrey">
-                        <div id="ad_box1" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>Javascript</span>
-                </div>
-                <div class="details-con">
-                    <div class="chartGrey">
-                        <div id="ad_box2" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>Bootstrap</span>
-                </div>
-                <div class="details-con">
-                    <div class="chartGrey">
-                        <div id="ad_box3" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>Ajax</span>
-                </div>
-                <div class="details-con">
-                    <div class="chartGrey">
-                        <div id="ad_box4" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>D3.js</span>
-                </div>
-                <div class="details-con">
-                    <div class="chartGrey">
-                        <div id="ad_box5" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>PHP</span>
-                </div>
-                <div class="details-con noborder details-tit-pad1">
-                    <div class="chartGrey">
-                        <div id="ad_box6" class="chartBlue"></div>
-                    </div>
-                </div>
-                <div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-check-square-o titSpan"></span>
-                    <span>Photoshop</span>
-                </div>
-                <div class="details-con con-pad">
-                    <div class="chartGrey">
-                        <div id="ad_box7" class="chartBlue"></div>
-                    </div>
-                </div>
-            </div>
+        <!--搜索框-->
+        <div id="search_bar" class="search_bar">
+            <form id="myform">
+                <input class="input" type="text" name="key" id="search" placeholder="想搜点什么呢...">
+                <input class="search_btn" type="submit" value="">
+                <span class="search_ico"></span>
+            </form>
         </div>
 
-        <!--项目实践-->
-        <div id="project">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseFour" class="column-title">
-                <span class="fa fa-paste"></span><span>项目实践</span><span>PROJECT</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseFour" class="panel-collapse collapse column-details">
-            	<div class="details-tit noborder details-tit-pad1">
-                    <span class="fa fa-thumb-tack"></span>
-                    <span>2017.04&nbsp;&nbsp;&nbsp;<a href="https://albertbobo.github.io/bardon/" target="_blank">Bardon</a></span>
-                </div>
-				<div class="details-con">
-                    <p>根据设计稿完成企业门户网站首页，着重实现一些交互效果。</p>
-                </div>
-                <div class="details-tit details-tit-pad1">
-                    <span class="fa fa-thumb-tack"></span>
-                    <span>2016.11&nbsp;&nbsp;&nbsp;<a href="https://albertbobo.github.io/easylife/" target="_blank">EasyLife</a></span>
-                </div>
-                <div class="details-con">
-                    <p>熟练使用Webstorm、Sublime等开发工具，构建了EasyLife简居家具商城。运用响应式布局设计，能自适应PC、平板、手机等不同分辨率的屏幕，兼容多个终端，并应用数据库技术，实现后台数据动态管理。界面风格简约，交互体验良好。</p>
-                </div>
-                <div class="details-tit details-tit-pad1">
-                    <span class="fa fa-thumb-tack"></span>
-                    <span>2016.01&nbsp;&nbsp;&nbsp;<a href="https://albertbobo.github.io/lenovoshop/" target="_blank">Lenovoshop</a></span>
-                </div>
-                <div class="details-con">
-                    <p>通过分析大量购物网站的设计模式、结构、样式与制作技术，适当运用jQuery、Bootstrap前端框架等相关技术，建设了静态电子产品购物网站Lenovoshop，全程独立完成了其首页、列表页及详情页的界面设计与网页制作。</p>
-                </div>
-                <div class="details-tit details-tit-pad1">
-                    <span class="fa fa-thumb-tack"></span>
-                    <span>2016.01&nbsp;&nbsp;&nbsp;<a href="https://albertbobo.github.io/color/works.html" target="_blank">Designcolor</a></span>
-                </div>
-                <div class="details-con">
-                    <p>独立设计制作了Designcolor设计色彩网的作品展示页面及网站LOGO，布局个性新颖，配色大胆活泼。</p>
-                </div>
-                <div class="details-tit details-tit-pad1">
-                    <span class="fa fa-thumb-tack"></span>
-                    <span>2015.10&nbsp;&nbsp;&nbsp;<a href="https://albertbobo.github.io/jyh/" target="_blank">骏怡汇</a></span>
-                </div>
-                <div class="details-con">
-                    <p>参与骏怡汇大学生校外实践教学基地校企合作网站建设，独立完成了界面设计与网页架构制作。</p>
-                </div>
-            </div>
-        </div>
+    </header>
 
-        <!--实习经历-->
-        <!-- <div id="internship"> -->
-            <!--栏目title-->
-            <!-- <div data-toggle="collapse" href="#collapseFive" class="column-title">
-                <span class="fa fa-briefcase"></span><span>实习经历</span><span>INTERNSHIP</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div> -->
-            <!--详情box，可折叠，默认显示-->
-            <!-- <div id="collapseFive" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder details-tit-pad2">
-                    <span class="fa fa-bullseye"></span>
-                    <span>//2017.03-</span>
-                </div>
-                <div class="details-con">
-                    <p>//暂无，有则补充</p>
-                </div>
-            </div>
-        </div> -->
-
-        <!--自我评价-->
-        <div id="aboutMe">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseSix" class="column-title">
-                <span class="fa fa-edit"></span><span>自我评价</span><span>ABOUT ME</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseSix" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder details-tit-pad2">
-                    <span class="fa fa-quote-left titSpan"></span>
-                    <span>热情</span>
-                </div>
-                <div class="details-con">
-                    <p>对互联网行业保持高度的敏感性和关注度，衷情于前端应用技术，并沉醉于学有所成的成就感。</p>
-                </div>
-                <div class="details-tit details-tit-pad2">
-                    <span class="fa fa-quote-left titSpan"></span>
-                    <span>自学能力</span>
-                </div>
-                <div class="details-con">
-                    <p>课余常在极客学院、菜鸟教程、开源中国等网站及论坛学习前端相关知识和技术，学习接收能力较强，且善于将其应用于实际项目。</p>
-                </div>
-                <div class="details-tit details-tit-pad2">
-                    <span class="fa fa-quote-left titSpan"></span>
-                    <span>认真细致</span>
-                </div>
-                <div class="details-con">
-                    <p>完美主义者，有轻微强迫症倾向，对自己要求严格，做事认真负责，执行力强。</p>
-                </div>
-                <div class="details-tit details-tit-pad2">
-                    <span class="fa fa-quote-left titSpan"></span>
-                    <span>设计感</span>
-                </div>
-                <div class="details-con">
-                    <p>拥有设计素描、设计色彩、平面构成、图形创意等绘画构图功底，培养了优秀的审美观和设计感，能设计出既符合Web UI原则又具有良好视觉效果与用户体验的网页界面。</p>
-                </div>
-                <div class="details-tit details-tit-pad2">
-                    <span class="fa fa-quote-left titSpan"></span>
-                    <span>个性</span>
-                </div>
-                <div class="details-con">
-                    <p><span>与人为善且谦逊沉稳</span><span>外表高冷但内心火热</span></p>
-                    <p><span>爱文学爱音乐爱电影</span><span>爱运动更爱编程设计</span></p>
-                    <p><span>始终对世界充满好奇</span><span>始终对生活无比热爱</span></p>
-                    <p><span>始终追逐我的前端梦</span><span>始终坚持走在求知路</span></p>
-                </div>
-            </div>
-        </div>
-
-        <!--联系方式-->
-        <div id="contactWay">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseSeven" class="column-title">
-                <span class="fa fa-twitch"></span><span>联系方式</span><span>CONTACT</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div id="collapseSeven" class="panel-collapse collapse column-details">
-                <div class="details-tit noborder details-tit-pad2">
-                    <span id="contel" class="fa titSpan titSize"></span>
-                    <span class="mytel">159-8630-1253</span>
-                </div>
-                <div class="details-tit details-tit-pad5">
-                    <span id="conemail" class="fa titSpan titSize"></span>
-                    <span class="myemail">einstein1995@163.com</span>
-                </div>
-                <div class="details-tit details-tit-pad7">
-                    <span id="conwechat" class="fa titSpan titSize"></span>
-                    <span class="mywechat">Albert-1111</span>
-                </div>
-                <div class="details-tit details-tit-pad6">
-                    <span id="conqq" class="fa titSpan titSize"></span>
-                    <span class="myqq">1402384905</span>
-                </div>
-            </div>
-        </div>
-
-        <!--作品展示-->
-        <div id="works">
-            <!--栏目title-->
-            <div data-toggle="collapse" href="#collapseEight" class="column-title">
-                <span class="fa fa-flag-checkered"></span><span>作品展示</span><span>WORKS</span>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="glyphicon glyphicon-align-justify"></div>
-                </div>
-            </div>
-            <!--详情box，可折叠，默认显示-->
-            <div class="row margin0">
-                <div id="collapseEight" class="panel-collapse collapse column-details">
-
-                    <!--网站构建-->
-                    <div class="col-xs-12 col-sm-12 col-md-4 padding0">
-                        <div data-toggle="collapse" href="#collapse01" class="details-tit2 noborder">
-                            <span class="fa fa-tags titSpan2"></span>
-                            <span>网站构建</span>
-                            <span class="fa fa-list-ul"></span>
-                        </div>
-                        <!--图片轮播区-->
-                        <div id="collapse01" class="panel-collapse collapse details-con2">
-                            <div id="myCarousel" class="carousel slide">
-                                <!-- 轮播（Carousel）指标 -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                                    <li data-target="#myCarousel" data-slide-to="6"></li>
-                                    <li data-target="#myCarousel" data-slide-to="7"></li>
-                                    <li data-target="#myCarousel" data-slide-to="8"></li>
-                                    <li data-target="#myCarousel" data-slide-to="9"></li>
-                                    <li data-target="#myCarousel" data-slide-to="10"></li>
-                                </ol>
-                                <!-- 轮播（Carousel）项目 -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <a href="https://albertbobo.github.io/easylife/" target="_blank"><img src="images/EasyLife01.png" alt="" title="立即访问EasyLife简居家具商城"></a>
-                                        <div class="carousel-caption">EasyLife简居家具商城之首页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/easylife/" target="_blank"><img src="images/EasyLife02.png" alt="" title="立即访问EasyLife家居商城"></a>
-                                        <div class="carousel-caption">EasyLife简居家具商城之列表页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/easylife/" target="_blank"><img src="images/EasyLife03.png" alt="" title="立即访问EasyLife家居商城"></a>
-                                        <div class="carousel-caption">EasyLife简居家具商城之详情页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/lenovoshop/" target="_blank"><img src="images/Lenovoindex.png" alt="" title="立即访问Lenovo购物商城"></a>
-                                        <div class="carousel-caption">Lenovo购物商城之首页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/lenovoshop/" target="_blank"><img src="images/Lenovolist1.png" alt="" title="立即访问Lenovo购物商城"></a>
-                                        <div class="carousel-caption">Lenovo购物商城之列表页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/lenovoshop/" target="_blank"><img src="images/Lenovolist2.png" alt="" title="立即访问Lenovo购物商城"></a>
-                                        <div class="carousel-caption">Lenovo购物商城之列表页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/lenovoshop/" target="_blank"><img src="images/Lenovodetails.png" alt="" title="立即访问Lenovo购物商城"></a>
-                                        <div class="carousel-caption">Lenovo购物商城之详情页</div>
-                                    </div>
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/jyh/" target="_blank"><img src="images/JYH.png" alt=""
-                                        title="立即访问骏怡汇"></a>
-                                        <div class="carousel-caption">骏怡汇之首页</div>
-                                    </div>                               
-                                    <div class="item">
-                                        <a href="https://albertbobo.github.io/color/works.html" target="_blank"><img src="images/designcolor.png" alt="" title="立即访问设计色彩"></a>
-                                        <div class="carousel-caption">设计色彩之作品欣赏</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/news.jpg" alt="">
-                                        <div class="carousel-caption">万象资源[一览通]之热点聚焦</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/2ddh.jpg" alt="">
-                                        <div class="carousel-caption">二维动画制作之首页</div>
-                                    </div>
-                                </div>
-
-                                <!-- 轮播（Carousel）导航 -->
-                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                            </div>
-                        </div>
-                        <!--图片轮播区-->
-                    </div>
-                    <!--网站构建-->
-
-                    <!--手机主题-->
-                    <div class="col-xs-12 col-sm-6 col-md-4 padding0">
-                        <div data-toggle="collapse" href="#collapse02" class="details-tit2 noborder">
-                            <span class="fa fa-tags titSpan2"></span>
-                            <span>手机主题</span>
-                            <span class="fa fa-list-ul"></span>
-                        </div>
-
-                        <!--图片轮播区-->
-                        <div id="collapse02" class="panel-collapse collapse details-con2">
-                            <div id="myCarouse2" class="carousel slide">
-                                <!-- 轮播（Carousel）指标 -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarouse2" data-slide-to="1"></li>
-                                    <li data-target="#myCarouse2" data-slide-to="2"></li>
-                                    <li data-target="#myCarouse2" data-slide-to="3"></li>
-                                    <li data-target="#myCarouse2" data-slide-to="4"></li>
-                                    <li data-target="#myCarouse2" data-slide-to="5"></li>
-                                </ol>
-                                <!-- 轮播（Carousel）项目 -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="images/UI_Lock.jpg" alt="">
-                                        <div class="carousel-caption">漂流水瓶</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/UI_App_01.jpg" alt="">
-                                        <div class="carousel-caption">漂流水瓶</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/UI_App_02.jpg" alt="">
-                                        <div class="carousel-caption">漂流水瓶</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/UI01.jpg" alt="">
-                                        <div class="carousel-caption">年年有余</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/UI02.jpg" alt="">
-                                        <div class="carousel-caption">年年有余</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/UI03.jpg" alt="">
-                                        <div class="carousel-caption">年年有余</div>
-                                    </div>
-                                </div>
-
-                                <!-- 轮播（Carousel）导航 -->
-                                <a class="carousel-control left" href="#myCarouse2" data-slide="prev">&lsaquo;</a>
-                                <a class="carousel-control right" href="#myCarouse2" data-slide="next">&rsaquo;</a>
-                            </div>
-                        </div>
-                        <!--图片轮播区-->
-                    </div>
-                    <!--手机主题-->
-
-                    <!--创意海报-->
-                    <div class="col-xs-12 col-sm-6 col-md-4 padding0">
-                        <div data-toggle="collapse" href="#collapse03" class="details-tit2 noborder">
-                            <span class="fa fa-tags titSpan2"></span>
-                            <span>创意海报</span>
-                            <span class="fa fa-list-ul"></span>
-                        </div>
-
-                        <!--图片轮播区-->
-                        <div id="collapse03" class="panel-collapse collapse details-con2">
-                            <div id="myCarouse3" class="carousel slide">
-                                <!-- 轮播（Carousel）指标 -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarouse3" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarouse3" data-slide-to="1"></li>
-                                    <li data-target="#myCarouse3" data-slide-to="2"></li>
-                                </ol>
-                                <!-- 轮播（Carousel）项目 -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="images/tree.jpg" alt="">
-                                        <div class="carousel-caption">“提倡节约，反对浪费”宣传海报</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/DLJ01.jpg" alt="">
-                                        <div class="carousel-caption">“大辣娇”方便面平面广告</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/DLJ02.jpg" alt="">
-                                        <div class="carousel-caption">“大辣娇”方便面平面广告</div>
-                                    </div>
-                                </div>
-
-                                <!-- 轮播（Carousel）导航 -->
-                                <a class="carousel-control left" href="#myCarouse3" data-slide="prev">&lsaquo;</a>
-                                <a class="carousel-control right" href="#myCarouse3" data-slide="next">&rsaquo;</a>
-                            </div>
-                        </div>
-                        <!--图片轮播区-->
-                    </div>
-                    <!--创意海报-->
-
-                </div>
-            </div>
+    <!--广播通告-->
+    <div class="broadcast">
+        <div class="voice">
+            <img src="images/voice.png" alt="">
+            <p>代替：我们的价值观是“诚信为本，真善美爱；简单快速，工匠精神；学以致用，自我增值”<a href="#">更多>></a></p>
         </div>
     </div>
+
+    <!--banner轮播-->
+    <div class="banner">
+        <div id="myCarouse" class="carousel slide" data-ride="carousel" data-interval="3000"> <!--自动轮播时间间隔3s-->
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarouse" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarouse" data-slide-to="1"></li>
+                <li data-target="#myCarouse" data-slide-to="2"></li>
+                <li data-target="#myCarouse" data-slide-to="3"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/banner01.jpg" alt="">
+                    <div class="slogan">
+                        <p>做快乐的投资者</p>
+                        <p>TO BE A HAPPY INVESTOR</p>
+                        <a href="#">投资测评</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/banner02.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/banner01.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/banner02.jpg" alt="">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarouse" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarouse" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+
 </div>
-<!--bottom-->
-<div class="bottombox"></div>
+
+<!--主体/各栏目内容-->
+<main>
+    <div class="content">
+        <!--投资课程-->
+        <div class="investCourse">
+            <div class="columnTitle">
+                <p>投资课程</p>
+                <p>多维学习成为金融行家</p>
+            </div>
+            <div class="columnCourse">
+                <ul>
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco01.png" alt="">
+                                <p>股票课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>股票课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco02.png" alt="">
+                                <p>期货课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>期货课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="courseInner">
+                            <div class="courserInit">
+                                <img src="images/courseIco03.png" alt="">
+                                <p>心理课程</p>
+                            </div>
+                            <div class="courseCaption">
+                                <img src="images/coursePic01.png" alt="">
+                                <div class="courseDetails">
+                                    <p>心理课程</p>
+                                    <hr>
+                                    <p>代替性文字：巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                                    <p>巴盾投资培训学院旗下的投资者研究中心，基于成熟的心理特质与行为理论，融合金融投资场景，开发了投资者特质模型，包含6大维度、24项评估指标。投资者通过线上测评，对标投资者特质数据库，形成专属的投资者特质报告。根据测评结果，由巴盾投资心理学专家提供解读反馈，给予投资规划、技术学习和交易行为等多方面建议。</p>
+                                    <a href="#" class="seeMore">了解更多>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#">
+                    <div class="hotCourse"></div>
+                    <img src="images/hotCourse.png" alt="">
+                    <span>更多热门课程</span>
+                </a>
+            </div>
+        </div>
+
+        <!--专业测评-->
+        <div class="proEva">
+            <div class="columnTitle">
+                <p>专业测评</p>
+                <p>塑造最有效的投资风格</p>
+            </div>
+            <div class="columnEva">
+                <ul>
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaModel01.png" alt="">
+                            <img src="images/evaModel02.png" alt="">
+                            <p>测评模型</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaJoin01.png" alt="">
+                            <img src="images/evaJoin02.png" alt="">
+                            <p>参与测评</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+
+                    <li>
+                        <div class="evaInit">
+                            <img src="images/evaFeedback01.png" alt="">
+                            <img src="images/evaFeedback02.png" alt="">
+                            <p>测评反馈</p>
+                        </div>
+                        <span><i></i><i></i></span>
+                        <hr>
+                        <p>巴盾投资者特质测评系统，将解开投资者个人之谜，客观审视投资场景下的自我，拨开迷茫，做快乐的投资者！</p>
+                        <a href="#" class="seeMore">查看详情</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--圈子社群-->
+        <div class="cirGroup">
+            <div class="columnTitle groupTitle">
+                <p>圈子社群</p>
+                <p>倾力智造尖端人脉经济圈</p>
+            </div>
+            <div class="columnGroup">
+                <ul>
+                    <li>
+                        <img src="images/groupPic01.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资峰会</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/groupPic02.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资茶馆</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <img src="images/groupPic03.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资听听</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/groupPic04.png" alt="">
+                        <div class="groupDetails">
+                            <p>巴盾 · 投资峰会</p>
+                            <p>邀请国内外金融投资大咖，为会员带来独家的趋势分析、投资建议和操盘指南。</p>
+                            <a href="#" class="seeMore marTop">了解更多>></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--第一平台-->
+        <div class="platform">
+            <div class="columnTitle">
+                <p>移动互联网时代投资教育第一平台</p>
+                <p>巴盾立足于投资教育领域，整合国内外优质资源，搭建线上线下学习平台，为投资者提供课程、测评和社群三大服务，<br>
+                    成就金融投资赢家，引领快乐投资浪潮。</p>
+            </div>
+            <a href="#" class="seeMore seeMore2">了解更多>></a>
+            <div class="columnPlat">
+                <ul>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco01_1.png" alt="">
+                            <img src="images/platIco01_2.png" alt="">
+                        </div>
+                        <p>最强投资测评</p>
+                    </li>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco02_1.png" alt="">
+                            <img src="images/platIco02_2.png" alt="">
+                        </div>
+                        <p>最干货课程 </p>
+                    </li>
+                    <li>
+                        <div class="platImg">
+                            <img src="images/platIco03_1.png" alt="">
+                            <img src="images/platIco03_2.png" alt="">
+                        </div>
+                        <p>最影响力圈子</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--订阅巴盾-->
+        <div class="takeBd">
+            <div class="columnTitle">
+                <p>订阅巴盾</p>
+                <p>最好的金融投资干货</p>
+            </div>
+            <div class="columnTake">
+                <div class="followUs">
+                    <img src="images/followUs.png" alt="">
+                    <ul>
+                        <li>
+                            <p>一条</p>
+                            <hr>
+                            <p>每日1条爆炸市场资讯</p>
+                        </li>
+                        <li>
+                            <p>一法</p>
+                            <hr>
+                            <p>每日1则技术干货打法</p>
+                        </li>
+                        <li>
+                            <p>一人</p>
+                            <hr>
+                            <p>每日1位金融投资达人</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="seeMore seeMore3">了解更多>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--版权区-->
+<footer>
+    <div class="aboutUs">
+        <ul>
+            <li></li><li></li><li></li><li></li>
+        </ul>
+        <dl>
+            <dt><a href="#">专业测评</a></dt>
+            <dd><a href="#">测评介绍</a></dd>
+            <dd><a href="#">测评模型</a></dd>
+            <dd><a href="#">参与测评</a></dd>
+            <dd><a href="#">测评反馈</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">投资课程</a></dt>
+            <dd><a href="#">系统课程</a></dd>
+            <dd><a href="#">股票课程</a></dd>
+            <dd><a href="#">期货课程</a></dd>
+            <dd><a href="#">心理课程</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">圈子社群</a></dt>
+            <dd><a href="#">投资峰会</a></dd>
+            <dd><a href="#">投资茶馆</a></dd>
+            <dd><a href="#">投资听听</a></dd>
+            <dd><a href="#">投资静旅</a></dd>
+        </dl>
+
+        <dl>
+            <dt><a href="#">关于我们</a></dt>
+            <dd><a href="#">巴盾简介</a></dd>
+            <dd><a href="#">巴盾释义</a></dd>
+            <dd><a href="#">巴盾使命</a></dd>
+            <dd><a href="#">巴盾价值观</a></dd>
+            <dd><a href="#">巴盾优势</a></dd>
+        </dl>
+    </div>
+
+    <div class="contactUs">
+        <img src="images/2code.png" alt="">
+        <div class="conWay">
+            <ul>
+                <li><a href="#"><img src="images/qq.png" alt=""></a></li>
+                <li><a href="#"><img src="images/microblog.png" alt=""></a></li>
+                <li><a href="#"><img src="images/wechat.png" alt=""></a></li>
+            </ul>
+            <p>地址：广州市天河区珠江新城华夏路富力盈凯广场42楼</p><br>
+            <p>电话：020-38369769<span>|</span>传真：020-3836973</p>
+        </div>
+        <div class="copyright">
+            <p>COPYRIGHT (C)   巴盾投资培训学院 CO.,LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
